@@ -1,0 +1,20 @@
+---
+layout: default
+title: 搜索
+---
+<div class="col-sm-12">
+	<div class="page-title">
+  		{{ page.title }}
+  	</div>
+  	<div class="page-content">
+		<div role="navigation" id="search">
+	  		<input type="search" class="search-field" placeholder="输入点东西... " id="searchbox">
+		</div>
+		<ul class="results leaders"><!-- results lists --></ul>
+		<p>Search powered by <a class="link" href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple-Jekyll-Search</a> </p>
+  	</div>  	
+</div>
+<script src="{{ "/assets/js/simpleJekyllSearch.js" | prepend: site.url }}"></script>
+<script>
+	{% include scripts/simple-search.html %}
+</script>

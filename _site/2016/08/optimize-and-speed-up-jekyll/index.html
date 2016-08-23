@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Your Website  &mdash; 对Jekyll博客的本地化优化 </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="alternate" type="application/atom+xml" title="Your Website" href="/feed.xml">
+        <!-- Loop and attach page tags from page meta section -->
+        
+        <meta name="keywords" content="jekylliconfontcdn">
+        
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+       <link href="https://at.alicdn.com/t/font_1471502518_052932.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.10.2.min.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+<body>
+
+<main>
+    <span class="statusbar"></span>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+        <div id="body" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- side navigation -->
+                <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
+                    <header id="menu" role="banner">
+                        <p class="menu-title">Close</p>
+                        <a href="#nav" class="close-btn">
+                            <img src="https://dn-fast.qbox.me/close-btn.svg" alt="close button">
+                        </a>
+                    </header>
+                    <ul class="sidebar" >
+<!-- sort in alphebetical order -->
+    <p class="separator">导航</p>
+    <li><a href="/index.html">主页</a></li>
+    <li><a href="/contact/">联系方式</a></li>
+    <li><a href="/search/">搜索</a></li>
+    <li><a href="/tags/">标签</a></li>
+    <li><a href="https://jnuer.com">JNUER</a></li>
+
+    <a class="goto-top-link hide-on-phone" href="#top">
+        <div class="goto-top text-center">
+            <i class="iconfont icon-icon-iconup"></i>
+        </div>
+    </a>
+</ul>
+
+                </nav>
+                <header id="menu" role="banner">
+                    <p class="menu-title">Menu</p>
+                    <a href="#nav" class="menu-btn">
+                        <img src="https://dn-fast.qbox.me/menu-btn.svg" alt="menu button">
+                    </a>
+                </header>
+                <!-- Content -->
+                <div class="col-sm-10">
+                    <nav class="top">
+                        <a href="/">Just record things. &mdash; Your Website</a>
+                        <span class="pull-right">
+                            <a id="weibo-ic" class="link" href="http://weibo.com/xlon">
+                                <i class="iconfont icon-weibo" aria-hidden="true"></i>
+                            </a>
+                            <a id="git-ic" class="link" href="https://github.com/hiplon">
+                                <i class="iconfont icon-github"></i>
+                            </a>
+                            <a id="rss-ic" class="link" href="/feed.xml">
+                        <i class="iconfont icon-feed"></i>
+                            </a>
+                        </span>
+                    </nav>
+                    <div class="row">
+                        <div class="col-sm-12">
+    <div class="page">
+    	<div class="page-title">
+    		对Jekyll博客的本地化优化
+    		<div class="meta">    			
+                
+                By HKL,
+                
+    			<time class="timeago" datetime="2016-08-18 14:53:57 +0800">Thursday 18 August 2016</time>,
+    			<a href="/2016/08/optimize-and-speed-up-jekyll/#ds-thread"> 
+					<span class="ds-thread-count" data-thread-key="/2016/08/optimize-and-speed-up-jekyll" data-count-type="comments"></span>
+					<i class="iconfont icon-comment"></i></a>
+    		</div>
+    	</div>
+        <div class="page-content">
+            <p>由于博客从ghost转到了jekyll，很多东西需要进行优化配置。首先从网上找一个比较适合自己的模板，在github上找到了<a href="https://github.com/iamnii/wangana">wangana</a>这款模板，觉得挺合适，然后就clone下来开始了改造。</p>
+
+<p>首先是将一些不要的功能都精简掉，同时因为这个模板原来css、font、js等等的资源都是存在本地，考虑到这个主机是托管在国外一个128MB的迷你型VPS上(还要跑个nginx)，所以就将其能在国内找到CDN的资源，如jquery，bootstrap，fontawesome都从国内的公共CDN引用，然后再将主css传到七牛上，同时使用多说而不是disqus，同时找到了多说的完美https方案就用上了。</p>
+
+<p>然后发现fontawesome的性能依旧不是特别理想，所以再将fontawesome换成了iconfont。所以目前博客在国内完全刷新大概需要2s，握手交换传输主页这个时间差不多是极限了。</p>
+
+<p>最后再根据自己的需要增加了博客分页的功能，以后再根据需要作一下修正。</p>
+
+<p>国内有个阿里云学生版主机，不过快毕业了，可能就废弃了，这个国外便宜主机就留着慢慢渣干性能。</p>
+
+            <!-- Share & Comments -->
+            <div class="share">
+    <p>发布于:
+        <i>
+            Thursday 18 August 2016
+        </i>
+        <a class="pull-right" href="http://service.weibo.com/share/share.php?url=https://ppuu.org//2016/08/optimize-and-speed-up-jekyll/&title=对Jekyll博客的本地化优化" target="_blank">
+            <i class="iconfont icon-share" style="color:red;"></i> 分享至微博
+        </a>
+    </p>
+    <ul>
+        <li>估计你也会喜欢:</li>
+        <ul>
+        
+            <li>
+                <a href="/2016/08/Demo7/">Demo 7</a>
+            </li>
+        
+            <li>
+                <a href="/2016/08/demo6/">demo6</a>
+            </li>
+        
+            <li>
+                <a href="/2016/07/demo5/">demo5</a>
+            </li>
+        
+        </ul>
+    </ul>
+</div>
+<div class="comments">
+    <div id="disqus_thread"></div>
+</div>
+
+            
+        </div>
+    </div>
+</div>
+<script>
+    $(".page-preview-icon").hover(function(){
+        $(this).parents(".page-nav").css("z-index","5000");
+    });
+</script>
+<script src="https://dn-hb0716.qbox.me/duoshuo.js"></script>
+<!-- 多说评论框 start -->
+	<div id="ds-thread" class="ds-thread" data-thread-key="/2016/08/optimize-and-speed-up-jekyll" data-title="对Jekyll博客的本地化优化" data-url="https://ppuu.org//2016/08/optimize-and-speed-up-jekyll/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xxx"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer text-center meta">
+            Powered by <a class="link" href="https://jekyllrb.com/">Jekyll</a> . 
+				<a class="link" href="http://www.miibeian.gov.cn">粤ICP备xxxx号-1</a>.
+				<a class="link" href="http://beian.gov.cn/portal/recordQuery">粤公网安备 xxxxxx号</a>.
+        </footer>
+    </div>
+</main>
+        <!-- Other JavaScripts -->
+        <script src="https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/jquery.timeago.js"></script>
+        <script>
+          $(document).ready(function() {
+    var timer;
+
+    $(window).bind('scroll', (function() {
+        clearTimeout(timer);
+        timer = setTimeout(getPercent, 5);
+        isTop();
+    }));
+
+    $(".goto-top-link").click(function(){
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+});
+
+function scrollPossition() {
+    return ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
+}
+
+function getPercent() {
+    $(".statusbar").css("width", String(scrollPossition()) + "%");
+
+    if (scrollPossition() > 97) {
+        $(".statusbar").css("background-color", "#1ca265");
+    } else {
+        $(".statusbar").css("background-color", "#eb5e29");
+    }
+    return;
+}
+
+function isTop() {
+  if(scrollPossition() > 30)
+    $(".goto-top").fadeIn("slow");
+  else
+    $(".goto-top").fadeOut("slow");
+}
+          $(document).ready(function() {
+    $('.menu-btn').click(function() {
+        $('.row-offcanvas').toggleClass('active');
+    });
+    $('.close-btn').click(function() {
+        $('.row-offcanvas').toggleClass('active');
+    });
+});
+          jQuery(document).ready(function() {
+    jQuery("time.timeago").timeago();
+});
+        </script>
+    </body>
+</html>
+

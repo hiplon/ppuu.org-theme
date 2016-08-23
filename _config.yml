@@ -1,0 +1,28 @@
+gems: [jekyll-paginate]
+
+name: Your Website
+description:  Just record things.
+
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
+
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+markdown: kramdown
+
+permalink: /:year/:month/:title/
+owner:
+    name: HKL
+    twitter: #
+    github: #
+    disqus_shortname: #
+
+ga_id: #
+ga_username: #
+
+paginate: 5
+paginate_path: "page:num"
+
+timezone: Asia/Shanghai

@@ -1,0 +1,29 @@
+---
+layout: post
+title: demo5
+date: '2016-07-27 09:37:23'
+
+---
+
+demo5
+demo5
+
+{% highlight cpp %}
+
+switch(buf[i] & (BYTE)0xc0)
+{
+case 0x00:
+    //I Frame
+    break;
+case 0x40:
+    //P Frame
+    break;
+case 0x80:
+    //B Frame
+    break;
+default:
+    break;
+}
+
+{% endhighlight %}
+

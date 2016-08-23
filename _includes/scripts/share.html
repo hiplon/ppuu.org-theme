@@ -1,0 +1,24 @@
+<div class="share">
+    <p>发布于:
+        <i>
+            {{ page.date |  date: "%A %-d %B %Y" }}
+        </i>
+        <a class="pull-right" href="http://service.weibo.com/share/share.php?url=https://ppuu.org/{{ page.url | prepend: site.url }}&title={{ page.title }}" target="_blank">
+            <i class="iconfont icon-share" style="color:red;"></i> 分享至微博
+        </a>
+    </p>
+    <ul>
+        <li>估计你也会喜欢:</li>
+        <ul>
+        {% for post in site.related_posts limit:3 %}
+            <li>
+                <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </ul>
+</div>
+<div class="comments">
+    <div id="disqus_thread"></div>
+</div>
+

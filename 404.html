@@ -1,0 +1,24 @@
+---
+layout: default
+title: 404
+permalink: /404.html
+---
+
+<div class="text-center">
+  <h1>哎呀!</h1>
+  <p>你要访问的资源不见了&mdash;</p>
+  <p>大写的404.</p>
+  <h2>要不搜索一下吧.</h2>
+    	<div class="page-content">
+		<div role="navigation" id="search">
+	  		<input type="search" class="search-field" placeholder="输入点东西... " id="searchbox">
+		</div>
+		<ul class="results leaders"><!-- results lists --></ul>
+		<p>Search powered by <a class="link" href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple-Jekyll-Search</a> </p>
+  	</div>  
+    <script src="{{ "/assets/js/simpleJekyllSearch.js" | prepend: site.url }}"></script>
+<script>
+	{% include scripts/simple-search.html %}
+</script>
+</div>
+

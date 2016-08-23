@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xsl:stylesheet [<!ENTITY mdash "&#x2014;">]>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text" xml:lang="en">Your Website</title>
+  <link type="application/atom+xml" href="/feed.xml" rel="self"/>
+  <link type="text/html" href="" rel="alternate"/>
+  <updated>2016-08-23T15:32:30+08:00</updated>
+  <id>/all_feed</id>
+  <author>
+    <name>HKL</name>
+  </author>
+
+  
+  <entry>
+    <title>Demo 7</title>
+    <link href="/2016/08/Demo7/"/>
+    <updated>2016-08-18T14:53:57+08:00</updated>
+    <id>/2016/08/Demo7</id>
+    <content type="html">&lt;p&gt;Demo 7
+Demo 7
+Demo 7
+Demo 7
+Demo 7
+Demo 7
+Demo 7&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>对Jekyll博客的本地化优化</title>
+    <link href="/2016/08/optimize-and-speed-up-jekyll/"/>
+    <updated>2016-08-18T14:53:57+08:00</updated>
+    <id>/2016/08/optimize-and-speed-up-jekyll</id>
+    <content type="html">&lt;p&gt;由于博客从ghost转到了jekyll，很多东西需要进行优化配置。首先从网上找一个比较适合自己的模板，在github上找到了&lt;a href=&quot;https://github.com/iamnii/wangana&quot;&gt;wangana&lt;/a&gt;这款模板，觉得挺合适，然后就clone下来开始了改造。&lt;/p&gt;
+
+&lt;p&gt;首先是将一些不要的功能都精简掉，同时因为这个模板原来css、font、js等等的资源都是存在本地，考虑到这个主机是托管在国外一个128MB的迷你型VPS上(还要跑个nginx)，所以就将其能在国内找到CDN的资源，如jquery，bootstrap，fontawesome都从国内的公共CDN引用，然后再将主css传到七牛上，同时使用多说而不是disqus，同时找到了多说的完美https方案就用上了。&lt;/p&gt;
+
+&lt;p&gt;然后发现fontawesome的性能依旧不是特别理想，所以再将fontawesome换成了iconfont。所以目前博客在国内完全刷新大概需要2s，握手交换传输主页这个时间差不多是极限了。&lt;/p&gt;
+
+&lt;p&gt;最后再根据自己的需要增加了博客分页的功能，以后再根据需要作一下修正。&lt;/p&gt;
+
+&lt;p&gt;国内有个阿里云学生版主机，不过快毕业了，可能就废弃了，这个国外便宜主机就留着慢慢渣干性能。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>demo6</title>
+    <link href="/2016/08/demo6/"/>
+    <updated>2016-08-15T12:01:06+08:00</updated>
+    <id>/2016/08/demo6</id>
+    <content type="html">&lt;p&gt;demo6
+demo6
+demo6
+demo6
+demo6
+demo6&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>demo5</title>
+    <link href="/2016/07/demo5/"/>
+    <updated>2016-07-27T09:37:23+08:00</updated>
+    <id>/2016/07/demo5</id>
+    <content type="html">&lt;p&gt;demo5
+demo5&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BYTE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xc0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//I Frame
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//P Frame
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//B Frame
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>demo4</title>
+    <link href="/2013/07/demo4/"/>
+    <updated>2013-07-28T00:31:45+08:00</updated>
+    <id>/2013/07/demo4</id>
+    <content type="html">&lt;p&gt;demo4
+demo4
+demo4
+demo4
+demo4&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gtk-chtheme&lt;/code&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>demo3</title>
+    <link href="/2013/07/demo3/"/>
+    <updated>2013-07-23T17:02:09+08:00</updated>
+    <id>/2013/07/demo3</id>
+    <content type="html">&lt;p&gt;demo3
+demo3
+demo3
+demo3
+demo3&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>demo2</title>
+    <link href="/2013/07/demo2/"/>
+    <updated>2013-07-23T06:00:49+08:00</updated>
+    <id>/2013/07/demo2</id>
+    <content type="html">&lt;p&gt;demo2
+demo2
+demo2&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>

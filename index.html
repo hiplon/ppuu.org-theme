@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<div class="col-sm-12">
+
+    <div class="page">
+		{% if paginator.total_pages > 1 %}
+        {% for post in paginator.posts %}
+
+            <div class="page-item">
+                <div class="col-sm-8">
+                    <ul class="page-item-title">
+                        <li><time class="timeago meta" datetime="{{ post.date }}">{{ post.date |  date: "%A %-d %B %Y" }}</time>
+                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#ds-thread"> <i class="iconfont icon-comment"></i></a></li>
+                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 hide-on-phone">
+                    <ul class="page-item-title pull-right meta">
+                        <li><a href="{{ post.url | prepend: site.url }}#ds-thread">
+                         评论<i class="iconfont icon-comment"></i></a></li>
+                        <li><a href="{{ post.url | prepend: site.url }}">全文 <i class="iconfont icon-ellipsis"></i></a></li>
+                        <li><a class="pib-indicator">预览 <i class="iconfont icon-expand"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 page-item-body">
+                    {{post.excerpt}}
+                </div>
+            </div>
+        {% endfor %}
+      {% endif %}
+      
+<div class="pagination">
+<li><a href="/index.html">第一页</a></li>
+{% if paginator.page > 2 %}
+<li><a href="/page{{paginator.previous_page}}/">上一页</a></li>
+{% endif %}
+{% assign pageSize = 5 %}
+{% assign startPage = paginator.page | minus:pageSize %}
+{% if 2 > startPage %}
+{% assign startPage = 2 %}
+{% endif %}
+{% assign endPage = paginator.page | plus:pageSize %}
+{% if endPage >= paginator.total_pages %}
+{% assign endPage = paginator.total_pages | minus:1 %}
+{% endif %}
+{% for count in (startPage..endPage) %}
+{% if count == paginator.page %}
+<li><a href="#"><span class="current-page">{{count}}</span></a></li>
+{% else %}
+<li><a href="/page{{count}}/">{{count}}</a></li>
+{% endif %}
+{% endfor %}
+{% if paginator.next_page %}
+<li><a href="/page{{paginator.next_page}}/">下一页</a></li>
+{% endif %}
+<li><a href="/page{{paginator.total_pages}}/">末页</a></li>
+<li><a href="#">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a></li>
+</div>
+
+
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $(".page").children().first().find(".page-item-body").css( "display", "block" );
+    $(".page").children().first().find(".pib-indicator")
+        .find("i").toggleClass("iconfont icon-shrink").toggleClass("iconfont icon-expand");
+
+    $(".page-item .pib-indicator").click(function() {
+        var preview = $(this);
+        preview.find("i").toggleClass("iconfont icon-expand").toggleClass("iconfont icon-shrink");
+        $(this).closest(".page-item").find(".page-item-body").toggle("slow", function() {});
+    });
+});
+</script>

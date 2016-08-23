@@ -1,0 +1,53 @@
+{% include head.html %}
+<main>
+    <span class="statusbar"></span>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+        <div id="body" class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- side navigation -->
+                <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
+                    <header id="menu" role="banner">
+                        <p class="menu-title">Close</p>
+                        <a href="#nav" class="close-btn">
+                            <img src="{{ "https://dn-fast.qbox.me/close-btn.svg" | prepend: site.url }}" alt="close button">
+                        </a>
+                    </header>
+                    {% include sidenav.html %}
+                </nav>
+                <header id="menu" role="banner">
+                    <p class="menu-title">Menu</p>
+                    <a href="#nav" class="menu-btn">
+                        <img src="{{ "https://dn-fast.qbox.me/menu-btn.svg" | prepend: site.url }}" alt="menu button">
+                    </a>
+                </header>
+                <!-- Content -->
+                <div class="col-sm-10">
+                    <nav class="top">
+                        <a href="{{ "/" | prepend: site.url }}">{{ site.description }} &mdash; {{ site.name }}</a>
+                        <span class="pull-right">
+                            <a id="weibo-ic" class="link" href="http://weibo.com/xlon">
+                                <i class="iconfont icon-weibo" aria-hidden="true"></i>
+                            </a>
+                            <a id="git-ic" class="link" href="https://github.com/hiplon">
+                                <i class="iconfont icon-github"></i>
+                            </a>
+                            <a id="rss-ic" class="link" href="{{ "/feed.xml" | prepend: site.url }}">
+                        <i class="iconfont icon-feed"></i>
+                            </a>
+                        </span>
+                    </nav>
+                    <div class="row">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer text-center meta">
+            Powered by <a class="link" href="https://jekyllrb.com/">Jekyll</a> . 
+				<a class="link" href="http://www.miibeian.gov.cn">粤ICP备xxxx号-1</a>.
+				<a class="link" href="http://beian.gov.cn/portal/recordQuery">粤公网安备 xxxxxx号</a>.
+        </footer>
+    </div>
+</main>
+{% include footer.html %}
