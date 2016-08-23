@@ -1,7 +1,7 @@
 
 ==============
 
-ppuu.org-theme 一个在中国访问比较友好的 [Jekyll](http://jekyllrb.com/) 主题, 基本参加了 [wangana](https://github.com/iamnii/wangana/) 的主题并且将静态资源分别用百度CDN，又拍云，同时使用阿里的iconfont替换了fontawesome，使得在国内访问速度大大提升，
+ppuu.org-theme 一个在中国访问比较友好的 [Jekyll](http://jekyllrb.com/) 主题, 基本参考了 [wangana](https://github.com/iamnii/wangana/) 的主题并且将静态资源分别用百度CDN，又拍云，同时使用阿里的iconfont替换了fontawesome，使得在国内访问速度大大提升，
 
 同时在原主题基础上增加了分页功能，去除了一些无关紧要的逻辑，将jquery.timeago汉化。可参考 [ 对Jekyll博客的本地化优化 ](https://ppuu.org/2016/08/optimize-and-speed-up-jekyll/)
 
