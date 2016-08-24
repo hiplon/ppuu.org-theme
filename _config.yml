@@ -22,7 +22,7 @@ owner:
 ga_id: #
 ga_username: #
 
-paginate: 5
+paginate: 6
 paginate_path: "page:num"
 
 timezone: Asia/Shanghai
